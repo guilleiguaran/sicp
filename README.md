@@ -1,3 +1,9 @@
+Structure and Interpretation of Computer Programs
+=================================================
+
+<img src="http://mitpress.mit.edu/sicp/graphics/main-banner.gif" />
+
+
 Practical exercises of MIT SICP book done using MIT Scheme.
 
 Read the book free in [MIT SICP page](http://mitpress.mit.edu/sicp/)
