@@ -6,8 +6,7 @@
 ;; (define (a-plus-abs-b a b)
 ;;  ((if (> b 0) + -) a b))
 
-The procedure read two numbers a and b, if b is greater than 0 it sum a and b, else it subtract a and b,
-returning in both cases a + |b|. Ex:
+The procedure read two numbers a and b and performs an operation depending of the value of b. If b is greater than 0 it performs a sum between a and b, else it performs a subtract between a and b returning in bot cases a + |b|. Example:
 
 (a-plus-abs-b 1  2) = (+ 1  2) = 3
 (a-plus-abs-b 1 -2) = (- 1 -2) = 3
