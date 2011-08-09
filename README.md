@@ -6,7 +6,7 @@ Structure and Interpretation of Computer Programs
 
 Practical exercises of MIT SICP book done using MIT Scheme.
 
-Read the book free in [MIT SICP page](http://mitpress.mit.edu/sicp/)
+Read the book free in [MIT SICP page](http://mitpress.mit.edu/sicp/), you can get [ePub version](https://github.com/downloads/ieure/sicp/sicp.epub) provided by [ieure](https://github.com/ieure/sicp)
 
 Download MIT Scheme in [MIT/GNU Scheme page](http://www.gnu.org/software/mit-scheme/)
 
