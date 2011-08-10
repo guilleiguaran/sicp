@@ -25,5 +25,5 @@ interpreter try to evaluate (p) and it enters in a loop because (p) is calling i
 
 In normal-order the interpreter retrieve the value of variables only when is required in a evaluation, when the if
 is evaluated the interpreter replace x with the value 0 and do the comparation, since x is equal to 0, the interpreter
-returns 0 and y nevers get evaluated.
+returns 0 and y nevers get evaluated, then the interpreter won't enter in the loop caused by the procedure (p).
 

@@ -4,14 +4,12 @@
 
 
 (define (sum-of-greatest-squares x y z)
-  (define (square x)
-   (* x x))
-  (define (sum-of-squares x y)
-   (+ (square x) (square y)))
-  (if (> x y)
-    (if (> y z) (sum-of-squares x y) (sum-of-squares x z))
-    (if (> x z) (sum-of-squares y x) (sum-of-squares y z))))
+  (define (square x) (* x x))
+  (define (sum-of-squares x y) (+ (square x) (square y)))
+  (if (> x y) 
+      (if (> y z) (sum-of-squares x y) (sum-of-squares x z))
+      (if (> z x) (sum-of-squares y z) (sum-of-squares y x))))
 
 
 ; test
-(sum-of-greatest-squares 1 2 3)
+(sum-of-greatest-squares 1 2 3)  ; 13
