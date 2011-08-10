@@ -25,3 +25,9 @@
 ;;                      x)))
 ;;
 ;; What happens when Alyssa attempts to use this to compute square roots? Explain.
+
+When Alyssa attempts to use the "new-if" the program will run indefinitely in a loop because
+when the "if" special form is used it evaluate only one of the clauses, then-clause or else-clause.
+The "new-if" defined doesn't have this property and then-clause and else-clause are evaluated
+(because we are using an applicative-order interpreter) and this result in a loop because
+sqrt-iter will call itself every time.
