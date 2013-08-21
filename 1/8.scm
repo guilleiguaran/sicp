@@ -9,20 +9,25 @@
 ;; Newton's method in general as an abstraction of these square-root and
 ;; cube-root procedures.)
 
+(define (square x)
+  (* x x))
+
+(define (improve guess x)
+  (/ (+ (/ x (square guess)) (* 2 guess)) 3))
+
+(define (cube x)
+  (* x x x))
+
+(define (good-enough? guess old-guess x)
+  (and (< (abs (- (cube guess) x)) 0.001)
+       (= guess old-guess)))
+
+(define (cbrt-iter guess old-guess x)
+  (if (good-enough? guess old-guess x)
+      guess
+      (cbrt-iter (improve guess x) guess x)))
+
 (define (cbrt x)
-  (define (square x)
-    (* x x))
-  (define (improve guess x)
-    (/ (+ (/ x (square guess)) (* 2 guess)) 3))
-  (define (cube x)
-    (* x x x))
-  (define (good-enough? guess old-guess x)
-    (and (< (abs (- (cube guess) x)) 0.001)
-         (= guess old-guess)))
-  (define (cbrt-iter guess old-guess x)
-    (if (good-enough? guess old-guess x)
-        guess
-        (cbrt-iter (improve guess x) guess x)))
   (cbrt-iter 1.0 1.0 x))
 
 ; test
